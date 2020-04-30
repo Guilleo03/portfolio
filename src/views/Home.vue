@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <router-link :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
-     v-for="(trabajo,index) of Trabajos" :key="index">
+     v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <button>{{trabajo.nombre}}</button>
     </router-link>
+    <h1>{{ $store.state.Trabajos[1].nombre }}</h1>
   </div>
 </template>
 
@@ -16,22 +17,5 @@ export default {
   views:{
     Trabajos
   },
-  data(){
-    return{
-      Trabajos: [
-        {
-          url: "trabajo1",
-          nombre: "Trabajo 1",
-          descripcion: "Esta es la descripcion del trabajo 1",
-        },
-        {
-          url: "trabajo2",
-          nombre: "Trabajo 2",
-          descripcion: "Esta es la descripcion del trabajo 2",
-        }
-
-      ]
-    }
-  }
 }
 </script>
