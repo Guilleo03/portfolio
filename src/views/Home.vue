@@ -6,7 +6,7 @@
      v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <button>{{trabajo.nombre}}</button>
     </router-link>
-    <h1>{{ $store.state.Trabajos[1].nombre }}</h1>
+    <h2>{{ $store.state.Trabajos[1].nombre }}</h2>
   </div>
 </template>
 

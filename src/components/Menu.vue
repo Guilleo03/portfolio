@@ -11,3 +11,6 @@ export default {
     name: "Menu"
 }
 </script>
+
+<style>
+</style>

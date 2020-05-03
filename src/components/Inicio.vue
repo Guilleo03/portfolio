@@ -1,9 +1,22 @@
 <template>
   <div id="inicio">
-    <div id="bg">
-      <div id="name">
-        <h1>Guille Otegui</h1>
-        <p>Diseño web</p>
+    <nav id="homeNav">
+      <router-link to="/">
+        <img id="logo" src="../assets/img/logo.png" alt />
+      </router-link>
+      <ul id="homeUl">
+        <li>INICIO</li>
+        <li>TRABAJOS</li>
+        <li>ACERCA DE MÍ</li>
+        <li>CONTACTO</li>
+      </ul>
+    </nav>
+    <div id="main-bg">
+      <div id="mask">
+        <div id="name">
+          <h1>Guille Otegui</h1>
+          <p>Diseño web</p>
+        </div>
       </div>
       <div id="arrows">
         <span></span>
@@ -17,6 +30,9 @@
 </template>
 
 <script>
+
+import "../assets/js/scroll"
+
 export default {
   name: "Inicio"
 };
@@ -24,36 +40,98 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 $celeste: #22c9d1;
 $violeta: #7247ff;
 $amarillo: #ffd83b;
 
-#bg {
+nav {
+  position: fixed;
+  z-index: 9999;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  clip-path: circle(99.7% at 51% 0);
-  -webkit-clip-path: circle(100% at 50% -70%);
-  background: linear-gradient(-45deg, $violeta, $celeste);
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
+  height: 8vh;
+  padding: 0 80px;
+  line-height: 8vh;
+  font-weight: 300;
+  ul {
+    float: right;
+    list-style: none;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 13px;
+    li {
+      display: inline-block;
+      margin: 0 20px;
+      animation: nav 1s linear forwards;
+      opacity: 0;
+    }
+    :nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    :nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    :nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    :nth-child(4) {
+      margin-right: 0;
+      animation-delay: 0.8s;
+    }
   }
-  50% {
-    background-position: 100% 50%;
+}
+@keyframes nav {
+  0% {
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    opacity: 1;
   }
 }
+#logo {
+  height: 6vh;
+  filter: brightness(0) invert(1);
+  margin-top: 1vh;
+  animation: nav 1s linear forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+.nav-scrolled{
+  background-color: white;
+  transition: .3s all;
+}
+.ul-scrolled{
+  color: #333333;
+  transition: .3s all;
+}
+.img-scrolled{
+  filter: brightness(1) invert(1);
+}
+
+#main-bg {
+  height: 90vh;
+  width: 100%;
+  background-image: url("../assets/img/bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+#mask {
+  mask: url("../assets/img/mask.svg");
+  mask-size: cover;
+  -webkit-mask: url("../assets/img/mask.svg");
+  -webkit-mask-size: cover;
+  mask-position: center;
+  -webkit-mask-position: center;
+  height: 90vh;
+  width: 100%;
+}
+
 #name {
-  position: absolute;
+  position: fixed;
   top: 40vh;
+  width: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -72,6 +150,7 @@ $amarillo: #ffd83b;
     color: $amarillo;
   }
 }
+
 @keyframes letras {
   0% {
     opacity: 0;
@@ -86,7 +165,7 @@ $amarillo: #ffd83b;
 }
 #arrows {
   position: absolute;
-  top: 90vh;
+  top: 80vh;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -320,7 +399,6 @@ $amarillo: #ffd83b;
 #stars:after {
   content: " ";
   position: absolute;
-  top: 2000px;
   width: 1px;
   height: 1px;
   background: transparent;
@@ -562,7 +640,6 @@ $amarillo: #ffd83b;
 #stars2:after {
   content: " ";
   position: absolute;
-  top: 2000px;
   width: 2px;
   height: 2px;
   background: transparent;
@@ -621,7 +698,8 @@ $amarillo: #ffd83b;
 
 @keyframes animStar {
   from {
-    transform: translateY(0px);
+    transform: translateY(-1000px);
+    top: 0vh;
   }
   to {
     transform: translateY(-2000px);
