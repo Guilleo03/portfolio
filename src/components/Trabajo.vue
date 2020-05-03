@@ -16,9 +16,9 @@
 </template>
 
 <script>
+
 export default {
   name: "Trabajo",
 };
 
-/*v-if="$route.params.url === trabajo.url*/
 </script>

@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <Inicio />
+    <Menu />
     <router-link :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
      v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <button>{{trabajo.nombre}}</button>
@@ -11,9 +13,15 @@
 <script>
 // @ is an alias to /src
 import Trabajos from "@/views/Trabajos.vue"
+import Inicio from "@/components/Inicio.vue"
+import Menu from "@/components/Menu.vue";
 
 export default {
   name: 'Home',
+  components: {
+    Inicio,
+    Menu
+  },
   views:{
     Trabajos
   },
