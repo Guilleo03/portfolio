@@ -69,7 +69,7 @@ export default {
   }
   button {
     color: white;
-    background-image: linear-gradient(45deg, #22c9d1, #7247ff);
+    background-image: linear-gradient(45deg, #22c9d1, #7247ff, #22c9d1);
     height: 40px;
     width: 200px;
     background-size: 200%;
@@ -80,7 +80,7 @@ export default {
     font-size: 14px;
     letter-spacing: 1px;
     margin-top: 20px;
-    transition: 0.3s all;
+    transition: 0.5s all;
     background-position: 0;
     &:hover {
       background-position: 100%;
@@ -88,12 +88,13 @@ export default {
   }
 }
 .imgContainer {
-  width: 225px;
+  width: 400px;
   height: 400px;
   border-radius: 50%;
   background-image: linear-gradient(45deg, #22c9d1, #7247ff);
   transform: rotate(30deg);
-  box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 5px 30px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
   img {
     position: relative;
     animation: trabajo 3s linear infinite;
