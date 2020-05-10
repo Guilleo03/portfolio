@@ -19,23 +19,50 @@
 	l122.8,13.56c59.14,6.53,118.91,4.35,177.42-6.46L1366,22V0H0V22z"
         />
       </svg>
-      <div>
+      <div id="aboutMe">
         <article>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi commodi ut culpa praesentium eum molestiae soluta nisi. Deleniti repellendus, corporis explicabo velit pariatur tenetur voluptate cum accusamus nostrum ea nam.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ratione inventore doloremque totam cupiditate officiis provident laborum fugiat, et saepe eius aspernatur, voluptates necessitatibus corporis quos vitae, recusandae placeat incidunt.</p>
           <ul>
-            <li><img src="../assets/img/html.png" alt="html"></li>
-            <li><img src="../assets/img/css.png" alt="html"></li>
-            <li><img src="../assets/img/sass.png" alt="html"></li>
-            <li><img src="../assets/img/bootstrap.png" alt="html"></li>
-            <li><img src="../assets/img/js.png" alt="html"></li>
-            <li><img src="../assets/img/jquery.png" alt="html"></li>
-            <li><img src="../assets/img/php.png" alt="html"></li>
-            <li><img src="../assets/img/mysql.png" alt="html"></li>
-            <li><img src="../assets/img/ps.png" alt="html"></li>
-            <li><img src="../assets/img/ai.png" alt="html"></li>
-            <li><img src="../assets/img/ae.png" alt="html"></li>
-            <li><img src="../assets/img/git.png" alt="html"></li>
+            <li>
+              <img src="../assets/img/html.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/css.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/sass.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/bootstrap.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/js.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/jquery.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/vue.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/php.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/mysql.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/ps.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/ai.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/ae.png" alt="html" />
+            </li>
+            <li>
+              <img src="../assets/img/git.png" alt="html" />
+            </li>
           </ul>
         </article>
         <article>
@@ -753,7 +780,7 @@
           </svg>
         </article>
       </div>
-      <svg
+      <!-- <svg
         version="1.1"
         id="Capa_2"
         xmlns="http://www.w3.org/2000/svg"
@@ -769,9 +796,9 @@
           d="M0,22l314.64,49.53c77.77,12.24,156.97,12.38,234.78,0.41l229.1-35.25c63.38-9.75,127.76-11.13,191.5-4.09
 	l122.8,13.56c59.14,6.53,118.91,4.35,177.42-6.46L1366,22V0H0V22z"
         />
-      </svg>
+      </svg>-->
+      <div id="waves"></div>
     </section>
-    <div id="a"></div>
   </div>
 </template>
 
@@ -782,8 +809,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#a {
-  height: 100vh;
+#waves{
+    background-image: url("../assets/img/waves.png");
+    position: relative;
+    animation: waves 10s linear infinite;
+    width: 100%;
+    height: 86px;
+    &::before{
+      content:"";
+      position: absolute;
+      background-image: url("../assets/img/waves.png");
+    opacity: .7;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 86px;
+    animation: waves-reverse 10s linear infinite;
+    }
+}
+@keyframes waves-reverse{
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -1366px;
+  }
+}
+@keyframes waves{
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: 1366px;
+  }
 }
 section {
   background-color: #f7f7f7;
@@ -798,7 +856,7 @@ h2 {
   position: relative;
   top: 10px;
 }
-section div {
+#aboutMe {
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 80px;
@@ -807,6 +865,8 @@ section div {
 }
 ul{
   list-style: none;
+  text-align: center;
+  margin-top: 20px;
   li{
     display: inline-block;
     margin: 0 5px;

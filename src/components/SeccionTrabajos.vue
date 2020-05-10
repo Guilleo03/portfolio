@@ -12,9 +12,12 @@
         <div class="infoContainer">
           <h3>Nombre del trabajo 1</h3>
           <p>ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque velit et! Blanditiis esse minus perspiciatis illo tempora nemo illum impedit eius officia qui saepe, quis ducimus ipsa iure quasi.</p>
-          <router-link :to="{ name: 'Trabajos', params: {url : $store.state.Trabajos[0].url} }">
-            <button>Ver más</button>
-          </router-link>
+          <div class="buttonsWork">
+            <router-link :to="{ name: 'Trabajos', params: {url : $store.state.Trabajos[0].url} }">
+              <button>Ver más</button>
+            </router-link>
+            <a href class="visitSite">Ir a la página</a>
+          </div>
         </div>
         <div class="imgContainer">
           <img src="../assets/img/clima.png" alt />
@@ -67,24 +70,57 @@ export default {
       background-image: linear-gradient(to right, #22c9d1, #7247ff);
     }
   }
+  .buttonsWork {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   button {
-    color: white;
     background-image: linear-gradient(45deg, #22c9d1, #7247ff, #22c9d1);
-    height: 40px;
-    width: 200px;
-    background-size: 200%;
+    transform: scale(1.04, 1.14);
+  }
+  button,
+  .visitSite {
+    height: 38px;
+    width: 170px;
     cursor: pointer;
     border: none;
     outline: 0;
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: 20px !important;
+    font-size: 12px;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin-top: 30px;
     transition: 0.5s all;
-    background-position: 0;
+    color: white;
+    background-size: 200%;
+    text-decoration: none;
+    font-family: "Prompt", sans-serif;
+    line-height: 38px;
+    text-align: center;
+    position: relative;
     &:hover {
       background-position: 100%;
     }
+  }
+}
+.visitSite {
+  color: #333333 !important;
+  background-color: white !important;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #22c9d1, #7247ff, #22c9d1);
+    background-size: 200%;
+    transition: 0.5s all;
+    top: 0;
+    left: 0;
+    border-radius: 60px;
+    z-index: -1;
+    transform: scale(1.04, 1.14);
+  }
+  &:hover::before {
+    background-position: 100%;
   }
 }
 .imgContainer {
