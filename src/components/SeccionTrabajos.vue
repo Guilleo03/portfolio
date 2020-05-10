@@ -9,7 +9,7 @@
           :key="index">
           <button>{{trabajo.nombre}}</button>
         </router-link>-->
-        <div class="infoContainer">
+        <div v-scrollAnimation-left class="infoContainer">
           <h3>Nombre del trabajo 1</h3>
           <p>ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque velit et! Blanditiis esse minus perspiciatis illo tempora nemo illum impedit eius officia qui saepe, quis ducimus ipsa iure quasi.</p>
           <div class="buttonsWork">
@@ -19,7 +19,7 @@
             <a href class="visitSite">Ir a la página</a>
           </div>
         </div>
-        <div class="imgContainer">
+        <div v-scrollAnimation class="imgContainer">
           <img src="../assets/img/clima.png" alt />
         </div>
       </article>
@@ -146,5 +146,24 @@ export default {
   100% {
     transform: rotate(-15deg) translate(15px, -35px);
   }
+}
+
+.before-enter{
+  opacity: 0;
+  transform: translateX(35px) rotate(30deg);
+  transition: .5s all ease-in
+}
+.enter{
+  transform: translateX(0) rotate(30deg);
+  opacity: 1;
+}
+.before-enter-left{
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: .5s all ease-in
+}
+.enter-left{
+  transform: translateX(0);
+  opacity: 1;
 }
 </style>
