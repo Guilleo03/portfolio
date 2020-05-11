@@ -7,8 +7,8 @@
       <ul id="homeUl">
         <li><router-link id="navHome" to="/">INICIO</router-link></li>
         <li><a id="navWorks" href="#SeccionTrabajos">TRABAJOS</a  ></li>
-        <li><router-link id="navAboutMe" to="/">ACERCA DE MÍ</router-link></li>
-        <li><router-link id="navContact" to="/">CONTACTO</router-link></li>
+        <li><a id="navAboutMe" href="#AcercaDeMi">ACERCA DE MÍ</a></li>
+        <li><a id="navContact" href="#contacto">CONTACTO</a></li>
       </ul>
     </nav>
     <div id="main-bg">

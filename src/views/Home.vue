@@ -4,6 +4,7 @@
     <SeccionTrabajos />
     <AcercaDeMi />
     <Contacto />
+    <Footer />
     <!-- <h2>{{ $store.state.Trabajos[1].nombre }}</h2> -->
   </main>
 </template>
@@ -15,6 +16,7 @@ import Inicio from "@/components/Inicio.vue"
 import SeccionTrabajos from "@/components/SeccionTrabajos.vue";
 import AcercaDeMi from "@/components/AcercaDeMi.vue"
 import Contacto from "@/components/Contacto.vue"
+import Footer from "@/components/Footer.vue"
 
 export default {
   name: 'Home',
@@ -22,7 +24,8 @@ export default {
     Inicio,
     SeccionTrabajos,
     AcercaDeMi,
-    Contacto
+    Contacto,
+    Footer,
   },
   views:{
     Trabajos

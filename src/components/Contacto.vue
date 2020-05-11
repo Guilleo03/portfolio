@@ -30,12 +30,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h2{
+  padding-top: 55px !important;
+}
 #contacto {
   background-image: url("../assets/img/contact-bg.png");
   position: relative;
   animation: waves 10s linear infinite;
   width: 100%;
-  height: 100vh;
+  height: 92vh;
   &::before {
     content: "";
     position: absolute;
@@ -44,7 +47,7 @@ export default {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 100vh;
+    height: 92vh;
     animation: waves-reverse 10s linear infinite;
   }
 }
@@ -76,7 +79,7 @@ h2 {
 }
 form {
   position: absolute;
-  top: 60vh;
+  top: 55vh;
   width: 30%;
   background-color: white;
   left: 50%;
