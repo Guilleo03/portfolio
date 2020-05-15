@@ -128,7 +128,6 @@ export default {
   height: 400px;
   border-radius: 50%;
   background-image: linear-gradient(45deg, #22c9d1, #7247ff);
-  transform: rotate(30deg);
   box-shadow: 10px 5px 30px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   img {
@@ -165,5 +164,54 @@ export default {
 .enter-left{
   transform: translateX(0);
   opacity: 1;
+}
+@media screen and (max-width: 900px){
+  #SeccionTrabajos{
+    padding: 0 50px;
+    .imgContainer{
+      width: 270px;
+      height: 270px;
+      img{
+        height: 50vh;
+      }
+    }
+  }
+  .infoContainer{
+    padding: 0;
+    button, .visitSite {
+    width: 130px;
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  #SeccionTrabajos{
+    padding: 0 20px;
+  }
+  #myWorks article{
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+  }
+  .infoContainer{
+    padding: 0;
+  }
+  .imgContainer{
+    width: 300px;
+    height: 300px;
+    transform: rotate(0) !important;
+    img{
+      height: 50vh;
+    }
+  }
+  @keyframes trabajo {
+  0% {
+    transform: rotate(15deg) translate(15px, -35px);
+  }
+  50% {
+    transform: rotate(15deg) translate(15px, -25px);
+  }
+  100% {
+    transform: rotate(15deg) translate(15px, -35px);
+  }
+}
 }
 </style>

@@ -4,11 +4,24 @@
       <router-link to="/">
         <img id="logo" src="../assets/img/logo.png" alt />
       </router-link>
+      <div id="hamburger" v-on:click="open">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <ul id="homeUl">
-        <li><router-link id="navHome" to="/">INICIO</router-link></li>
-        <li><a id="navWorks" href="#SeccionTrabajos">TRABAJOS</a  ></li>
-        <li><a id="navAboutMe" href="#AcercaDeMi">ACERCA DE MÍ</a></li>
-        <li><a id="navContact" href="#contacto">CONTACTO</a></li>
+        <li>
+          <router-link id="navHome" to="/">INICIO</router-link>
+        </li>
+        <li>
+          <a id="navWorks" href="#SeccionTrabajos">TRABAJOS</a>
+        </li>
+        <li>
+          <a id="navAboutMe" href="#AcercaDeMi">ACERCA DE MÍ</a>
+        </li>
+        <li>
+          <a id="navContact" href="#contacto">CONTACTO</a>
+        </li>
       </ul>
     </nav>
     <div id="main-bg">
@@ -33,9 +46,18 @@
 
 <script>
 import "../assets/js/scroll";
+import "../assets/js/openMenu";
 
 export default {
-  name: "Inicio"
+  name: "Inicio",
+  methods: {
+    open: function(event) {
+      const hamburger = document.getElementsByClassName("line");
+      const homeUl = document.getElementById("homeUl");
+      homeUl.classList.toggle("open");
+      hamburger.classList.toggle("white-hamburger");
+    }
+  }
 };
 </script>
 
@@ -78,11 +100,11 @@ nav {
       position: relative;
       animation: nav 1s linear forwards;
       opacity: 0;
-      border-radius: 1px;   
-      a{
+      border-radius: 1px;
+      a {
         color: white !important;
         text-decoration-line: none !important;
-      }  
+      }
       &::before {
         content: "";
         position: absolute;
@@ -130,7 +152,9 @@ nav {
   animation-delay: 0.3s;
   transition: 0.3s all;
 }
-
+#hamburger {
+  display: none;
+}
 .nav-scrolled {
   background-color: white;
   transition: 0.3s all;
@@ -516,5 +540,130 @@ nav {
   to {
     transform: translateY(-2000px);
   }
+}
+.open {
+  clip-path: circle(900px at 90% -10%) !important;
+  -webkit-clip-path: circle(900px at 90% -10%) !important;
+}
+.white-hamburger {
+  background-color: white !important;
+}
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 0 50px;
+    #homeUl {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      background-image: linear-gradient(
+        45deg,
+        rgba(34, 201, 2091, 0.9),
+        rgba(114, 71, 255, 0.9)
+      );
+      top: 0;
+      left: 0;
+      display: block;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 4px;
+      clip-path: circle(50px at 90% -10%);
+      -webkit-clip-path: circle(50px at 90% -10%);
+      transition: 0.3s all ease-out;
+      li {
+        display: block;
+        &:nth-child(1) {
+          margin-top: 10vh;
+        }
+        a {
+          color: white !important;
+        }
+        &:hover::before{
+          background-image: none;
+        }
+      }
+    }
+    &:hover .line{
+      background-image: linear-gradient(45deg, rgb(34, 201, 2091), rgb(114, 71, 255))
+    }
+  }
+
+  #logo {
+    margin-top: 2vh;
+    height: 4vh;
+  }
+  #hamburger {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    z-index: 999;
+    transform: translateY(-50%);
+    .line {
+      height: 2px;
+      border-radius: 3px;
+      margin: 5px 0;
+      background-color: white;
+      &:nth-child(1){
+        width: 20px;
+      }
+      &:nth-child(2){
+        width: 15px;
+      }
+      &:nth-child(3){
+        width: 10px;
+      }
+    }
+  }
+  .nav-scrolled {
+    .line {
+      background-image: linear-gradient(
+        45deg,
+        rgb(34, 201, 2091),
+        rgb(114, 71, 255)
+      );
+    }
+  }
+  .open {
+    clip-path: circle(1000px at 90% -10%) !important;
+    -webkit-clip-path: circle(1000px at 90% -10%) !important;
+  }
+  .white-hamburger {
+    background-color: white !important;
+  }
+  #name h1{
+    font-size: 45px;
+  }
+  @keyframes letras {
+  0% {
+    opacity: 0;
+    filter: blur(25px);
+    letter-spacing: 15px;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    letter-spacing: 1px;
+  }
+}
+}
+@media screen and (max-width: 450px){
+  nav{
+    padding: 0 20px;
+    #hamburger{
+      right: 20px;
+    }
+  }
+  @keyframes letras {
+  0% {
+    opacity: 0;
+    filter: blur(25px);
+    letter-spacing: 10px;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    letter-spacing: 1px;
+  }
+}
 }
 </style>

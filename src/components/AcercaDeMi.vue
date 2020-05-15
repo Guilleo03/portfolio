@@ -21,8 +21,8 @@
       </svg>
       <div id="aboutMe">
         <article v-scrollAnimation>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi commodi ut culpa praesentium eum molestiae soluta nisi. Deleniti repellendus, corporis explicabo velit pariatur tenetur voluptate cum accusamus nostrum ea nam.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ratione inventore doloremque totam cupiditate officiis provident laborum fugiat, et saepe eius aspernatur, voluptates necessitatibus corporis quos vitae, recusandae placeat incidunt.</p>
+          <p>En 2019 finalice la carrera de Diseño web en Universidad ORT, donde aprendimos HTML, CSS, Javascript con Jquery, PHP y MySQL, entre otras herramientas de diseño.</p>
+          <p>Actualmente estoy cursando el segundo semestre de Analista en tecnologías de la información, donde estamos aprendiendo ASP.net con C# y bases de datos SQL. Aparte de esto, estoy aprendiendo Vue.js por mi cuenta.</p>
           <ul>
             <li>
               <img src="../assets/img/html.png" alt="html" />
@@ -999,5 +999,29 @@ ul{
 }
 .curve {
   fill: white !important;
+}
+
+@media screen and (max-width: 900px){
+  #aboutMe{
+    grid-template-columns: 1fr;
+    padding: 50px;
+    row-gap: 20px;
+    #illustration{
+      text-align: center;
+      svg{
+        height: 50vh;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  #aboutMe{
+    padding: 20px;
+    #illustration{
+      svg{
+        height: auto;
+      }
+    }
+  }
 }
 </style>

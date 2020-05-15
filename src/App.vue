@@ -1,7 +1,9 @@
 
 <template>
   <div id="app">
+    <transition name="fade" mode="out-in">
     <router-view />
+    </transition>
   </div>
 </template>
 
@@ -18,6 +20,8 @@ export default {};
 #app {
   font-family: "Prompt", sans-serif;
   color: #333333;
+  max-width: 100%;
+  overflow: hidden;
 }
 h2 {
   background: -webkit-linear-gradient(45deg, #22c9d1, #7247ff);
@@ -35,5 +39,18 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   letter-spacing: 4px;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+  transform: translateX(3em);
+}
+.fade-enter-active, .fade-leave-active{
+  transition: all .3s ease;
+}
+@media screen and (max-width: 375px){
+  h2{
+    padding: 60px 20px;
+    font-size: 40px;
+  }
 }
 </style>

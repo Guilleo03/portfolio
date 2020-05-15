@@ -166,4 +166,17 @@ form {
     top: -8px;
   }
 }
+@media screen and (max-width: 900px){
+  form{
+    width: 45%;
+    padding: 40px 20px;
+  }
+}
+@media screen and (max-width: 450px){
+  form{
+    top: 45vh;
+    width: 80%;
+    padding: 40px 20px;
+  }
+}
 </style>

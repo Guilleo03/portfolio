@@ -93,4 +93,14 @@ footer {
     }
   }
 }
+@media screen and (max-width: 900px){
+  #contFooter{
+    width: 45%;
+  }
+}
+@media screen and (max-width: 450px){
+  #contFooter{
+    width: 80%;
+  }
+}
 </style>
