@@ -52,7 +52,7 @@ export default {
   justify-items: center;
 }
 .infoContainer {
-  padding: 0 80px;
+  padding: 0 0 0 150px;
   text-align: left;
   h3 {
     font-weight: 300;
@@ -181,6 +181,11 @@ export default {
     button, .visitSite {
     width: 130px;
     }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .buttonsWork {
+    column-gap: 15px;
   }
 }
 @media screen and (max-width: 450px){

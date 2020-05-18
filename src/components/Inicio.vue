@@ -73,7 +73,7 @@ nav {
   z-index: 9999;
   width: 100%;
   height: 8vh;
-  padding: 0 80px;
+  padding: 0 150px;
   line-height: 8vh;
   font-weight: 300;
   transition: 0.3s all;
@@ -548,6 +548,15 @@ nav {
 .white-hamburger {
   background-color: white !important;
 }
+@media screen and (max-width: 1024px) {
+  #logo {
+    height: 4vh;
+    margin-top: 2vh;
+  }
+  .buttonsWork {
+    column-gap: 15px;
+  }
+}
 @media screen and (max-width: 900px) {
   nav {
     padding: 0 50px;
@@ -577,13 +586,17 @@ nav {
         a {
           color: white !important;
         }
-        &:hover::before{
+        &:hover::before {
           background-image: none;
         }
       }
     }
-    &:hover .line{
-      background-image: linear-gradient(45deg, rgb(34, 201, 2091), rgb(114, 71, 255))
+    &:hover .line {
+      background-image: linear-gradient(
+        45deg,
+        rgb(34, 201, 2091),
+        rgb(114, 71, 255)
+      );
     }
   }
 
@@ -603,13 +616,13 @@ nav {
       border-radius: 3px;
       margin: 5px 0;
       background-color: white;
-      &:nth-child(1){
+      &:nth-child(1) {
         width: 20px;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         width: 15px;
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         width: 10px;
       }
     }
@@ -630,40 +643,40 @@ nav {
   .white-hamburger {
     background-color: white !important;
   }
-  #name h1{
+  #name h1 {
     font-size: 45px;
   }
   @keyframes letras {
-  0% {
-    opacity: 0;
-    filter: blur(25px);
-    letter-spacing: 15px;
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0px);
-    letter-spacing: 1px;
+    0% {
+      opacity: 0;
+      filter: blur(25px);
+      letter-spacing: 15px;
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px);
+      letter-spacing: 1px;
+    }
   }
 }
-}
-@media screen and (max-width: 450px){
-  nav{
+@media screen and (max-width: 450px) {
+  nav {
     padding: 0 20px;
-    #hamburger{
+    #hamburger {
       right: 20px;
     }
   }
   @keyframes letras {
-  0% {
-    opacity: 0;
-    filter: blur(25px);
-    letter-spacing: 10px;
+    0% {
+      opacity: 0;
+      filter: blur(25px);
+      letter-spacing: 10px;
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px);
+      letter-spacing: 1px;
+    }
   }
-  100% {
-    opacity: 1;
-    filter: blur(0px);
-    letter-spacing: 1px;
-  }
-}
 }
 </style>

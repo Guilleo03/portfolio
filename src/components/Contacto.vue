@@ -4,7 +4,7 @@
       <h2>Contacto</h2>
       <form>
         <div>
-          <input id="nombre" type="text" name="nombre" required />
+          <input id="nombre" type="text" name="nombre" required autocomplete="off">
           <label class="label" for="nombre">Nombre</label>
         </div>
         <div>
@@ -164,6 +164,18 @@ form {
   textarea:focus + label,
   textarea:not(:focus):valid + label {
     top: -8px;
+  }
+}
+@media screen and (max-width: 1024px){
+  #contacto{
+    height: 50vh;
+    &::before{
+      height: 50vh;
+    }
+  }
+  form{
+    top: 30vh;
+    width: 50%;
   }
 }
 @media screen and (max-width: 900px){

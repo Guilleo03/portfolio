@@ -852,7 +852,7 @@ h2 {
 #aboutMe {
   display: grid;
   grid-template-columns: 60% 40%;
-  padding: 80px;
+  padding: 80px 150px;
   column-gap: 40px;
   align-items: center;  
 }
@@ -860,11 +860,11 @@ ul{
   list-style: none;
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
   li{
-    display: inline-block;
-    margin: 0 5px;
     img{
-      transform: scale(.8);
+      transform: scale(.7);
     }
   }
 }

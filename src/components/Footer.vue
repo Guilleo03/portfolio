@@ -93,6 +93,11 @@ footer {
     }
   }
 }
+@media screen and (max-width: 1024px){
+  #contFooter{
+    width: 50%;
+  }
+}
 @media screen and (max-width: 900px){
   #contFooter{
     width: 45%;
