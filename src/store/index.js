@@ -6,14 +6,20 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         Trabajos: [{
-                url: "trabajo1",
-                nombre: "Trabajo 1",
-                descripcion: "Esta es la descripcion del trabajo 1",
+                url: "bicicletas-covid19",
+                nombre: "Bicicletas COVID-19",
+                descripcion: "Landing page creada para promocionar y brindar información sobre varios puntos de alquileres de bicicletas en España, para reducir el movimiento en transporte público y evitar aglomeraciones.",
+                herramientas: ('HTML', 'CSS'),
+                urlPagina: 'http://www.bicicletascovid-19.com/',
+                imgInicio: '../assets/img/bicicletas.png'
+
             },
             {
-                url: "trabajo2",
-                nombre: "Trabajo 2",
-                descripcion: "Esta es la descripcion del trabajo 2",
+                url: "sdaf",
+                nombre: "sdf",
+                descripcion: "Landing page creada para promocionar y brindar información sobre varios puntos de alquileres de bicicletas en España, para reducir el movimiento en transporte público y evitar aglomeraciones.",
+                herramientas: ('HTML', 'CSS'),
+                urlPagina: '',
             }
         ]
     },

@@ -70,7 +70,7 @@ footer {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 30%;
+  width: calc(100% - 300px);
   div {
       display: inline-block;
       line-height: 8vh;

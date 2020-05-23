@@ -19,6 +19,9 @@
             </ul>
           </div>
         </div>
+        <div id="workImg">
+          
+        </div>
 
         <!-- <p>la url es: {{trabajo.url}}</p>
             <p>el id es: {{trabajo.id}}</p>

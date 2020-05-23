@@ -1,7 +1,7 @@
 <template>
   <div id="SeccionTrabajos">
     <h2>Trabajos</h2>
-    <section id="myWorks">
+    <section id="myWorks" v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <article>
         <!-- <router-link
           :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
@@ -10,17 +10,20 @@
           <button>{{trabajo.nombre}}</button>
         </router-link>-->
         <div v-scrollAnimation-left class="infoContainer">
-          <h3>Nombre del trabajo 1</h3>
-          <p>ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque velit et! Blanditiis esse minus perspiciatis illo tempora nemo illum impedit eius officia qui saepe, quis ducimus ipsa iure quasi.</p>
+          <h3>{{trabajo.nombre}}</h3>
+          <p>{{trabajo.descripcion}}</p>
           <div class="buttonsWork">
-            <router-link :to="{ name: 'Trabajos', params: {url : $store.state.Trabajos[0].url} }">
+            <router-link
+              @click.native="$scrollToTop"
+              :to="{ name: 'Trabajos', params: {url : $store.state.Trabajos[0].url} }"
+            >
               <button>Ver más</button>
             </router-link>
-            <a href class="visitSite">Ir a la página</a>
+              <a v-if="trabajo.urlPagina !== ''" :href="trabajo.urlPagina" class="visitSite" target="_blank">Ir a la página</a>   
           </div>
         </div>
         <div v-scrollAnimation class="imgContainer">
-          <img src="../assets/img/clima.png" alt />
+          <img src="../assets/img/bicicletas.png" alt />
         </div>
       </article>
     </section>
@@ -35,6 +38,11 @@ export default {
   name: "SeccionTrabajos",
   views: {
     Trabajos
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    }
   }
 };
 </script>
@@ -147,39 +155,40 @@ export default {
   }
 }
 
-.before-enter{
+.before-enter {
   opacity: 0;
   transform: translateX(35px) rotate(30deg);
-  transition: .5s all ease-in
+  transition: 0.5s all ease-in;
 }
-.enter{
+.enter {
   transform: translateX(0) rotate(30deg);
   opacity: 1;
 }
-.before-enter-left{
+.before-enter-left {
   opacity: 0;
   transform: translateX(-35px);
-  transition: .5s all ease-in
+  transition: 0.5s all ease-in;
 }
-.enter-left{
+.enter-left {
   transform: translateX(0);
   opacity: 1;
 }
-@media screen and (max-width: 900px){
-  #SeccionTrabajos{
+@media screen and (max-width: 900px) {
+  #SeccionTrabajos {
     padding: 0 50px;
-    .imgContainer{
+    .imgContainer {
       width: 270px;
       height: 270px;
-      img{
+      img {
         height: 50vh;
       }
     }
   }
-  .infoContainer{
+  .infoContainer {
     padding: 0;
-    button, .visitSite {
-    width: 130px;
+    button,
+    .visitSite {
+      width: 130px;
     }
   }
 }
@@ -188,35 +197,35 @@ export default {
     column-gap: 15px;
   }
 }
-@media screen and (max-width: 450px){
-  #SeccionTrabajos{
+@media screen and (max-width: 450px) {
+  #SeccionTrabajos {
     padding: 0 20px;
   }
-  #myWorks article{
+  #myWorks article {
     grid-template-columns: 1fr;
     row-gap: 100px;
   }
-  .infoContainer{
+  .infoContainer {
     padding: 0;
   }
-  .imgContainer{
+  .imgContainer {
     width: 300px;
     height: 300px;
     transform: rotate(0) !important;
-    img{
+    img {
       height: 50vh;
     }
   }
   @keyframes trabajo {
-  0% {
-    transform: rotate(15deg) translate(15px, -35px);
+    0% {
+      transform: rotate(15deg) translate(15px, -35px);
+    }
+    50% {
+      transform: rotate(15deg) translate(15px, -25px);
+    }
+    100% {
+      transform: rotate(15deg) translate(15px, -35px);
+    }
   }
-  50% {
-    transform: rotate(15deg) translate(15px, -25px);
-  }
-  100% {
-    transform: rotate(15deg) translate(15px, -35px);
-  }
-}
 }
 </style>

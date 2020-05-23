@@ -7,7 +7,6 @@ window.onscroll = function() {
     let logo = document.getElementById("logo");
 
     if (window.scrollY > 300) {
-        console.log("scroll");
         nav.classList.add("nav-scrolled");
         home.classList.add("ul-scrolled");
         works.classList.add("ul-scrolled");
@@ -15,7 +14,6 @@ window.onscroll = function() {
         contact.classList.add("ul-scrolled");
         logo.classList.add("img-scrolled");
     } else {
-        console.log("scroll menor")
         nav.classList.remove("nav-scrolled");
         home.classList.remove("ul-scrolled");
         works.classList.remove("ul-scrolled");

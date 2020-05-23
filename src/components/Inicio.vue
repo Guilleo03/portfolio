@@ -70,7 +70,7 @@ $amarillo: #ffe459;
 
 nav {
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   height: 8vh;
   padding: 0 150px;

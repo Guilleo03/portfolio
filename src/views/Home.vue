@@ -3,7 +3,7 @@
     <Inicio />
     <SeccionTrabajos />
     <AcercaDeMi />
-    <Contacto />
+    <Contacto/>
     <Footer />
     <!-- <h2>{{ $store.state.Trabajos[1].nombre }}</h2> -->
   </main>
