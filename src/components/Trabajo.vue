@@ -3,30 +3,20 @@
     <div v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <div v-if="$route.params.url === trabajo.url">
         <div id="work-bg"></div>
-        <h2>Nombre del trabajo</h2>
+        <h2>{{trabajo.nombre}}</h2>
         <div id="workInfo">
           <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestias, dolores nihil vero, illo mollitia hic harum quam dolorum commodi consequuntur iure quod voluptates! Eaque aspernatur cupiditate deleniti voluptatem aut.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque nisi consequuntur quasi exercitationem odit, illo nulla et beatae repellendus debitis veritatis, eos, blanditiis quas impedit? Natus eum vitae iure!</p>
+            <p>{{trabajo.descripcion}}<br>{{trabajo.descripcionLarga}}</p>
           </div>
           <div>
             <p>Tecnología usada:</p>
-            <ul>
-              <li>Herramienta</li>
-              <li>Herramienta</li>
-              <li>Herramienta</li>
-              <li>Herramienta</li>
+            <ul v-for="(unaHerramienta,index) of trabajo.herramientas" :key="index">
+              <li>{{unaHerramienta}}</li>
             </ul>
           </div>
         </div>
         <div id="workImg">
-          
         </div>
-
-        <!-- <p>la url es: {{trabajo.url}}</p>
-            <p>el id es: {{trabajo.id}}</p>
-            <p>la descripcion es: {{trabajo.descripcion}}</p>
-        <p>el nombre es: {{trabajo.nombre}}</p>-->
       </div>
     </div>
   </div>

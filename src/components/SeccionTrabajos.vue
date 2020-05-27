@@ -23,7 +23,7 @@
           </div>
         </div>
         <div v-scrollAnimation class="imgContainer">
-          <img src="../assets/img/bicicletas.png" alt />
+          <img :src="require('../assets/img/'+trabajo.imgInicio+'.png')" alt />
         </div>
       </article>
     </section>
@@ -58,6 +58,7 @@ export default {
   align-items: center;
   text-align: center;
   justify-items: center;
+  height: 90vh;
 }
 .infoContainer {
   padding: 0 0 0 150px;
@@ -139,29 +140,31 @@ export default {
   box-shadow: 10px 5px 30px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   img {
-    position: relative;
-    animation: trabajo 3s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: trabajo 5s linear infinite;
   }
 }
 @keyframes trabajo {
   0% {
-    transform: rotate(-15deg) translate(15px, -35px);
+    transform: translate(-50%, -53%);
   }
   50% {
-    transform: rotate(-15deg) translate(15px, -25px);
+    transform: translate(-50%, -47%);
   }
   100% {
-    transform: rotate(-15deg) translate(15px, -35px);
+    transform: translate(-50%, -53%);
   }
 }
 
 .before-enter {
   opacity: 0;
-  transform: translateX(35px) rotate(30deg);
+  transform: translateX(35px);
   transition: 0.5s all ease-in;
 }
 .enter {
-  transform: translateX(0) rotate(30deg);
+  transform: translateX(0);
   opacity: 1;
 }
 .before-enter-left {

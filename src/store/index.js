@@ -9,17 +9,19 @@ export default new Vuex.Store({
                 url: "bicicletas-covid19",
                 nombre: "Bicicletas COVID-19",
                 descripcion: "Landing page creada para promocionar y brindar información sobre varios puntos de alquileres de bicicletas en España, para reducir el movimiento en transporte público y evitar aglomeraciones.",
-                herramientas: ('HTML', 'CSS'),
+                herramientas: ['HTML', 'CSS'],
                 urlPagina: 'http://www.bicicletascovid-19.com/',
-                imgInicio: '../assets/img/bicicletas.png'
+                imgInicio: 'bicicletas',
+                descripcionLarga: "aaaaaaaaaaaaaa"
 
             },
             {
                 url: "sdaf",
                 nombre: "sdf",
                 descripcion: "Landing page creada para promocionar y brindar información sobre varios puntos de alquileres de bicicletas en España, para reducir el movimiento en transporte público y evitar aglomeraciones.",
-                herramientas: ('HTML', 'CSS'),
+                herramientas: ['HTML', 'CSS'],
                 urlPagina: '',
+                imgInicio: 'clima'
             }
         ]
     },
