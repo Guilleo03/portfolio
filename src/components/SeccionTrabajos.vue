@@ -14,7 +14,7 @@
           <p>{{trabajo.descripcion}}</p>
           <div class="buttonsWork">
             <router-link
-              @click.native="$scrollToTop"
+              v-on:click="scrollToTop"
               :to="{ name: 'Trabajos', params: {url : $store.state.Trabajos[0].url} }"
             >
               <button>Ver más</button>

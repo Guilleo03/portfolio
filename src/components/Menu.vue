@@ -4,12 +4,12 @@
       <router-link to="/">
         <img id="logo" src="../assets/img/logo.png" alt />
       </router-link>
-      <div id="hamburger" v-on:click="open">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div id="hamburger" @click="open">
+        <div class="line" ref="hamburger1"></div>
+        <div class="line" ref="hamburger2"></div>
+        <div class="line" ref="hamburger3"></div>
       </div>
-      <ul id="homeUl">
+      <ul id="homeUl" ref="nav">
         <li>
           <router-link id="navHome" to="/#contacto">INICIO</router-link>
         </li>
@@ -33,14 +33,19 @@ import "../assets/js/openMenu";
 export default {
   name: "Inicio",
   methods: {
-    open: function(event) {
-      const hamburger = document.getElementsByClassName("line");
-      const homeUl = document.getElementById("homeUl");
-      homeUl.classList.toggle("open");
-      hamburger.classList.toggle("white-hamburger");
+    open() {
+      const nav = this.$refs.nav.classList;
+      const hamburger1 = this.$refs.hamburger1.classList;
+      const hamburger2 = this.$refs.hamburger2.classList;
+      const hamburger3 = this.$refs.hamburger3.classList;
+
+      nav.contains('open') ? nav.remove('open') : nav.add('open')
+      nav.contains('open') ? hamburger1.add('white-hamburger') : hamburger1.remove('white-hamburger') 
+      nav.contains('open') ? hamburger2.add('white-hamburger') : hamburger2.remove('white-hamburger') 
+      nav.contains('open') ? hamburger3.add('white-hamburger') : hamburger3.remove('white-hamburger') 
     }
-  }
-};
+}
+}
 </script>
 
 <style lang="scss" scoped>
@@ -219,12 +224,13 @@ nav {
     }
   }
   .open {
-    clip-path: circle(1000px at 90% -10%) !important;
-    -webkit-clip-path: circle(1000px at 90% -10%) !important;
+    clip-path: circle(1200px at 90% -10%) !important;
+    -webkit-clip-path: circle(1200px at 90% -10%) !important;
   }
   .white-hamburger {
-    background-color: white !important;
-  }
+  background-image: none !important;
+  background-color: white !important;
+}
 }
 @media screen and (max-width: 450px) {
   nav {
