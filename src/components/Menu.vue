@@ -11,16 +11,16 @@
       </div>
       <ul id="homeUl" ref="nav">
         <li>
-          <router-link id="navHome" to="/#contacto">INICIO</router-link>
+          <router-link id="navHome" to="/">INICIO</router-link>
         </li>
         <li>
-          <router-link id="navWorks" to="/SeccionTrabajos">TRABAJOS</router-link>
+          <router-link id="navWorks" to="/">TRABAJOS</router-link>
         </li>
         <li>
-          <a id="navAboutMe" href="/#AcercaDeMi">ACERCA DE MÍ</a>
+          <router-link id="navAboutMe" to="/">ACERCA DE MÍ</router-link>
         </li>
         <li>
-          <a id="navContact" href="/#contacto">CONTACTO</a>
+          <router-link id="navContact" to="/">CONTACTO</router-link>
         </li>
       </ul>
     </nav>
@@ -39,13 +39,19 @@ export default {
       const hamburger2 = this.$refs.hamburger2.classList;
       const hamburger3 = this.$refs.hamburger3.classList;
 
-      nav.contains('open') ? nav.remove('open') : nav.add('open')
-      nav.contains('open') ? hamburger1.add('white-hamburger') : hamburger1.remove('white-hamburger') 
-      nav.contains('open') ? hamburger2.add('white-hamburger') : hamburger2.remove('white-hamburger') 
-      nav.contains('open') ? hamburger3.add('white-hamburger') : hamburger3.remove('white-hamburger') 
-    }
-}
-}
+      nav.contains("open") ? nav.remove("open") : nav.add("open");
+      nav.contains("open")
+        ? hamburger1.add("white-hamburger")
+        : hamburger1.remove("white-hamburger");
+      nav.contains("open")
+        ? hamburger2.add("white-hamburger")
+        : hamburger2.remove("white-hamburger");
+      nav.contains("open")
+        ? hamburger3.add("white-hamburger")
+        : hamburger3.remove("white-hamburger");
+    },
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -228,9 +234,9 @@ nav {
     -webkit-clip-path: circle(1200px at 90% -10%) !important;
   }
   .white-hamburger {
-  background-image: none !important;
-  background-color: white !important;
-}
+    background-image: none !important;
+    background-color: white !important;
+  }
 }
 @media screen and (max-width: 450px) {
   nav {

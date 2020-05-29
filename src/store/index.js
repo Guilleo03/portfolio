@@ -12,6 +12,8 @@ export default new Vuex.Store({
                 herramientas: ['HTML', 'CSS'],
                 urlPagina: 'http://www.bicicletascovid-19.com/',
                 imgInicio: 'bicicletas',
+                imgDetalles1: ['home-bicicletas'],
+                imgDetalles2: ['mobile-bicicletas-1', 'mobile-bicicletas-2', 'mobile-bicicletas-3'],
                 descripcionLarga: "aaaaaaaaaaaaaa"
 
             },
