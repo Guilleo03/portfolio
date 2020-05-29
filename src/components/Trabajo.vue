@@ -102,6 +102,7 @@ export default {
   }
 }
 #workImgs {
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
   background-color: #f7f7f7;
@@ -111,12 +112,16 @@ export default {
   article {
     display: grid;
     background-color: #f7f7f7;
-    padding: 30px 150px;
+    padding: 25px 150px;
+    &:nth-child(2){
+      margin-top: 40px;
+    }
   }
   img {
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
   }
 }
 .unaImg {

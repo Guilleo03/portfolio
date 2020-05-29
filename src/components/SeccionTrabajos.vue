@@ -19,7 +19,12 @@
             >
               <button>Ver más</button>
             </router-link>
-              <a v-if="trabajo.urlPagina !== ''" :href="trabajo.urlPagina" class="visitSite" target="_blank">Ir a la página</a>   
+            <a
+              v-if="trabajo.urlPagina !== ''"
+              :href="trabajo.urlPagina"
+              class="visitSite"
+              target="_blank"
+            >Ir a la página</a>
           </div>
         </div>
         <div v-scrollAnimation class="imgContainer">
@@ -144,6 +149,8 @@ export default {
     top: 50%;
     left: 50%;
     animation: trabajo 5s linear infinite;
+    width: 100%;
+    height: auto;
   }
 }
 @keyframes trabajo {
@@ -182,9 +189,6 @@ export default {
     .imgContainer {
       width: 270px;
       height: 270px;
-      img {
-        height: 50vh;
-      }
     }
   }
   .infoContainer {
@@ -215,19 +219,16 @@ export default {
     width: 300px;
     height: 300px;
     transform: rotate(0) !important;
-    img {
-      height: 50vh;
-    }
   }
   @keyframes trabajo {
     0% {
-      transform: rotate(15deg) translate(15px, -35px);
+      transform: translate(-50%, -53%);
     }
     50% {
-      transform: rotate(15deg) translate(15px, -25px);
+      transform: translate(-50%, -47%);
     }
     100% {
-      transform: rotate(15deg) translate(15px, -35px);
+      transform: translate(-50%, -53%);
     }
   }
 }
