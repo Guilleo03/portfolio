@@ -14,16 +14,21 @@ export default new Vuex.Store({
                 imgInicio: 'bicicletas',
                 imgDetalles1: ['home-bicicletas'],
                 imgDetalles2: ['mobile-bicicletas-1', 'mobile-bicicletas-2', 'mobile-bicicletas-3'],
+                bgImg: 'bicicletas-bg',
                 descripcionLarga: "aaaaaaaaaaaaaa"
 
             },
             {
-                url: "sdaf",
-                nombre: "sdf",
+                url: "weatherapp",
+                nombre: "WeatherApp",
                 descripcion: "Landing page creada para promocionar y brindar información sobre varios puntos de alquileres de bicicletas en España, para reducir el movimiento en transporte público y evitar aglomeraciones.",
-                herramientas: ['HTML', 'CSS'],
+                herramientas: ['HTML', 'CSS', 'jQuery', 'API OpenWeatherMap'],
                 urlPagina: '',
-                imgInicio: 'clima'
+                imgInicio: 'clima',
+                imgDetalles1: ['clima-1', 'clima-2', 'clima-3'],
+                imgDetalles2: ['clima-4', 'clima-5', 'clima-6'],
+                bgImg: 'clima-bg',
+                descripcionLarga: 'aaaa'
             }
         ]
     },

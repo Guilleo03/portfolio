@@ -1,8 +1,8 @@
 <template>
   <div id="SeccionTrabajos">
     <h2>Trabajos</h2>
-    <section id="myWorks" v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
-      <article>
+    <section id="myWorks">
+      <article v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
         <!-- <router-link
           :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
           v-for="(trabajo,index) of $store.state.Trabajos"
@@ -15,7 +15,7 @@
           <div class="buttonsWork">
             <router-link
               v-on:click="scrollToTop"
-              :to="{ name: 'Trabajos', params: {url : $store.state.Trabajos[0].url} }"
+              :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
             >
               <button>Ver más</button>
             </router-link>
@@ -149,7 +149,7 @@ export default {
     top: 50%;
     left: 50%;
     animation: trabajo 5s linear infinite;
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }

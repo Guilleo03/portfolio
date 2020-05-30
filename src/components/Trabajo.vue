@@ -2,7 +2,7 @@
   <div>
     <div v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <div v-if="$route.params.url === trabajo.url">
-        <div id="work-bg"></div>
+        <div id="work-bg" :style="{ 'background-image': 'url(../assets/img/' + trabajo.bgImg + '.jpg)','height': '92vh','background-position': 'top'}"></div>
         <h2>{{trabajo.nombre}}</h2>
         <section id="workInfo">
           <article>
@@ -70,8 +70,7 @@ export default {
 
 <style lang="scss">
 #work-bg {
-  background-image: url("../assets/img/bicicletas-bg.jpg");
-  background-position: top;
+  
   background-repeat: no-repeat;
   background-size: cover;
   height: 92vh;
