@@ -167,12 +167,6 @@ form {
   }
 }
 @media screen and (max-width: 1024px){
-  #contacto{
-    height: 50vh;
-    &::before{
-      height: 50vh;
-    }
-  }
   form{
     top: 30vh;
     width: 50%;

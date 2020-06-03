@@ -2,7 +2,10 @@
   <div>
     <div v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
       <div v-if="$route.params.url === trabajo.url">
-        <div id="work-bg" :style="{ 'background-image': 'url(../assets/img/' + trabajo.bgImg + '.jpg)','height': '92vh','background-position': 'top'}"></div>
+        <div
+          id="work-bg"
+          :style="{ backgroundImage: 'url(' + require('../assets/img/' + trabajo.bgImg + '.jpg') + ')'}"
+        ></div>
         <h2>{{trabajo.nombre}}</h2>
         <section id="workInfo">
           <article>
@@ -40,7 +43,7 @@
 	l122.8,13.56c59.14,6.53,118.91,4.35,177.42-6.46L1366,22V0H0V22z"
             />
           </svg>
-          <article v-bind:class = "(trabajo.imgDetalles1.length > 1)?'variasImg':'unaImg'">
+          <article v-bind:class="(trabajo.imgDetalles1.length > 1)?'variasImg':'unaImg'">
             <img
               v-for="(unaImgDetalle1,index1) of trabajo.imgDetalles1"
               :key="index1"
@@ -48,7 +51,7 @@
               alt
             />
           </article>
-          <article v-bind:class = "(trabajo.imgDetalles2.length > 1)?'variasImg':'unaImg'">
+          <article v-bind:class="(trabajo.imgDetalles2.length > 1)?'variasImg':'unaImg'">
             <img
               v-for="(unaImgDetalle2,index2) of trabajo.imgDetalles2"
               :key="index2"
@@ -64,13 +67,13 @@
 
 <script>
 export default {
-  name: "Trabajo",
-}
+  name: "Trabajo"
+};
 </script>
 
 <style lang="scss">
 #work-bg {
-  
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 92vh;
@@ -112,7 +115,7 @@ export default {
     display: grid;
     background-color: #f7f7f7;
     padding: 25px 150px;
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-top: 40px;
     }
   }
@@ -120,7 +123,7 @@ export default {
     width: 100%;
     height: auto;
     box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
+    border-radius: 10px;
   }
 }
 .unaImg {
@@ -129,5 +132,34 @@ export default {
 .variasImg {
   grid-template-columns: 1fr 1fr 1fr !important;
   column-gap: 50px;
+}
+@media screen and (max-width: 900px) {
+  #workInfo {
+    padding: 0 50px;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    row-gap: 50px;
+  }
+  #workImgs {
+    article {
+      padding: 25px 50px;
+    }
+  }
+  .variasImg{
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #workInfo {
+    padding: 0 20px;
+  }
+  #workImgs {
+    article {
+      padding: 25px 20px;
+    }
+  }
+  .variasImg{
+    column-gap: 20px;
+  }
 }
 </style>

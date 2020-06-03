@@ -11,16 +11,16 @@
       </div>
       <ul id="homeUl" ref="nav">
         <li>
-          <router-link id="navHome" to="/">INICIO</router-link>
+          <router-link id="navHome" to="/">Inicio</router-link>
         </li>
         <li>
-          <a id="navWorks" href="#SeccionTrabajos">TRABAJOS</a>
+          <a id="navWorks" href="#SeccionTrabajos">Trabajos</a>
         </li>
         <li>
-          <a id="navAboutMe" href="#AcercaDeMi">ACERCA DE MÍ</a>
+          <a id="navAboutMe" href="#AcercaDeMi">Acerca de mí</a>
         </li>
         <li>
-          <a id="navContact" href="#contacto">CONTACTO</a>
+          <a id="navContact" href="#contacto">Contacto</a>
         </li>
       </ul>
     </nav>
@@ -152,9 +152,9 @@ nav {
   }
 }
 #logo {
-  height: 6vh;
+  height: 5vh;
   filter: brightness(0) invert(1);
-  margin-top: 1vh;
+  margin-top: 1.5vh;
   animation: nav 1s linear forwards;
   opacity: 0;
   animation-delay: 0.3s;

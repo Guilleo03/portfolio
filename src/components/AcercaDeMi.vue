@@ -860,9 +860,8 @@ ul{
   list-style: none;
   text-align: center;
   margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
   li{
+    display: inline-block;
     img{
       transform: scale(.7);
     }
@@ -1008,20 +1007,20 @@ ul{
     row-gap: 20px;
     #illustration{
       text-align: center;
-      svg{
+      /*svg{
         height: 50vh;
-      }
+      }*/
     }
   }
 }
 @media screen and (max-width: 450px){
   #aboutMe{
     padding: 20px;
-    #illustration{
+    /*#illustration{
       svg{
         height: auto;
       }
-    }
+    }*/
   }
 }
 </style>
