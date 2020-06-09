@@ -14,6 +14,14 @@
               <br />
               {{trabajo.descripcionLarga}}
             </p>
+            <div id="page">
+            <a
+              v-if="trabajo.urlPagina !== ''"
+              :href="trabajo.urlPagina"
+              class="visitSite"
+              target="_blank"
+            >Ir a la página</a>
+            </div>
           </article>
           <article>
             <p>Tecnología usada:</p>
@@ -101,6 +109,52 @@ export default {
         }
       }
     }
+  }
+}
+#page{
+  display: grid;
+}
+.visitSite {
+    height: 38px;
+    width: 170px;
+    cursor: pointer;
+    border: none;
+    outline: 0;
+    border-radius: 20px !important;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    transition: 0.5s all;
+    color: white;
+    background-size: 200%;
+    text-decoration: none;
+    font-family: "Prompt", sans-serif;
+    line-height: 38px;
+    text-align: center;
+    position: relative;
+    &:hover {
+      background-position: 100%;
+    }
+  }
+.visitSite {
+  color: #333333 !important;
+  background-color: white !important;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #22c9d1, #7247ff, #22c9d1);
+    background-size: 200%;
+    transition: 0.5s all;
+    top: 0;
+    left: 0;
+    border-radius: 60px;
+    z-index: -1;
+    transform: scale(1.04, 1.14);
+  }
+  &:hover::before {
+    background-position: 100%;
   }
 }
 #workImgs {
