@@ -3,7 +3,6 @@
     <Inicio />
     <SeccionTrabajos />
     <AcercaDeMi />
-    <Contacto/>
     <Footer />
     <!-- <h2>{{ $store.state.Trabajos[1].nombre }}</h2> -->
   </main>
@@ -32,3 +31,4 @@ export default {
   },
 }
 </script>
+

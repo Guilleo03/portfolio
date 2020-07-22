@@ -19,9 +19,6 @@
         <li>
           <a id="navAboutMe" href="#AcercaDeMi">Acerca de mí</a>
         </li>
-        <li>
-          <a id="navContact" href="#contacto">Contacto</a>
-        </li>
       </ul>
     </nav>
     <div id="main-bg">
@@ -135,11 +132,9 @@ nav {
       animation-delay: 0.4s;
     }
     :nth-child(3) {
-      animation-delay: 0.6s;
-    }
-    :nth-child(4) {
       margin-right: 0;
-      animation-delay: 0.8s;
+      padding-right: 0;
+      animation-delay: 0.6s;
     }
   }
 }

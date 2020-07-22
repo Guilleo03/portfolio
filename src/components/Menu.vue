@@ -19,9 +19,6 @@
         <li>
           <router-link id="navAboutMe" to="/">Acerca de mí</router-link>
         </li>
-        <li>
-          <router-link id="navContact" to="/">Contacto</router-link>
-        </li>
       </ul>
     </nav>
   </div>
@@ -117,11 +114,9 @@ nav {
       animation-delay: 0.4s;
     }
     :nth-child(3) {
-      animation-delay: 0.6s;
-    }
-    :nth-child(4) {
       margin-right: 0;
-      animation-delay: 0.8s;
+      padding-right: 0;
+      animation-delay: 0.6s;
     }
   }
 }

@@ -780,7 +780,23 @@
           </svg>
         </article>
       </div>
-      <div id="waves"></div>
+      <svg
+        version="1.1"
+        id="Capa_2"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 1366 81"
+        style="enable-background:new 0 0 1366 81;"
+        xml:space="preserve"
+      >
+        <path
+          class="st0 curve"
+          d="M0,22l314.64,49.53c77.77,12.24,156.97,12.38,234.78,0.41l229.1-35.25c63.38-9.75,127.76-11.13,191.5-4.09
+	l122.8,13.56c59.14,6.53,118.91,4.35,177.42-6.46L1366,22V0H0V22z"
+        />
+      </svg>
     </section>
   </div>
 </template>
@@ -792,50 +808,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.before-enter{
+.before-enter {
   opacity: 0;
   transform: translateY(100px);
-  transition: .5s all ease-in
+  transition: 0.5s all ease-in;
 }
-.enter{
+.enter {
   transform: translateY(0);
   opacity: 1;
 }
-#waves{
-  margin-top: 60px;
-    background-image: url("../assets/img/waves.png");
-    position: relative;
-    animation: waves 10s linear infinite;
-    width: 100%;
-    height: 86px;
-    &::before{
-      content:"";
-      position: absolute;
-      background-image: url("../assets/img/waves.png");
-    opacity: .7;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 86px;
-    animation: waves-reverse 10s linear infinite;
-    }
-}
-@keyframes waves-reverse{
-  0%{
-    background-position: 0;
-  }
-  100%{
-    background-position: -1366px;
-  }
-}
-@keyframes waves{
-  0%{
-    background-position: 0;
-  }
-  100%{
-    background-position: 1366px;
-  }
-}
+
 section {
   background-color: #f7f7f7;
   height: auto;
@@ -854,16 +836,16 @@ h2 {
   grid-template-columns: 60% 40%;
   padding: 80px 150px;
   column-gap: 40px;
-  align-items: center;  
+  align-items: center;
 }
-ul{
+ul {
   list-style: none;
   text-align: center;
   margin-top: 20px;
-  li{
+  li {
     display: inline-block;
-    img{
-      transform: scale(.7);
+    img {
+      transform: scale(0.7);
     }
   }
 }
@@ -1000,27 +982,24 @@ ul{
   fill: white !important;
 }
 
-@media screen and (max-width: 900px){
-  #aboutMe{
+@media screen and (max-width: 1024px) {
+  #aboutMe {
     grid-template-columns: 1fr;
-    padding: 50px;
+    padding: 50px 150px;
     row-gap: 20px;
-    #illustration{
+    #illustration {
       text-align: center;
-      /*svg{
-        height: 50vh;
-      }*/
     }
   }
 }
-@media screen and (max-width: 450px){
-  #aboutMe{
-    padding: 20px;
-    /*#illustration{
-      svg{
-        height: auto;
-      }
-    }*/
+@media screen and (max-width: 768px) {
+  #aboutMe {
+    padding: 50px 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #aboutMe {
+    padding: 50px 35px;
   }
 }
 </style>

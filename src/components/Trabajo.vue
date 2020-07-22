@@ -15,12 +15,12 @@
               {{trabajo.descripcionLarga}}
             </p>
             <div id="page">
-            <a
-              v-if="trabajo.urlPagina !== ''"
-              :href="trabajo.urlPagina"
-              class="visitSite"
-              target="_blank"
-            >Ir a la página</a>
+              <a
+                v-if="trabajo.urlPagina !== ''"
+                :href="trabajo.urlPagina"
+                class="visitSite"
+                target="_blank"
+              >Ir a la página</a>
             </div>
           </article>
           <article>
@@ -67,6 +67,23 @@
               alt
             />
           </article>
+          <svg
+            version="1.1"
+            id="Capa_2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 1366 81"
+            style="enable-background:new 0 0 1366 81;"
+            xml:space="preserve"
+          >
+            <path
+              class="st0 curve"
+              d="M0,22l314.64,49.53c77.77,12.24,156.97,12.38,234.78,0.41l229.1-35.25c63.38-9.75,127.76-11.13,191.5-4.09
+	l122.8,13.56c59.14,6.53,118.91,4.35,177.42-6.46L1366,22V0H0V22z"
+            />
+          </svg>
         </section>
       </div>
     </div>
@@ -111,31 +128,36 @@ export default {
     }
   }
 }
-#page{
+#page {
   display: grid;
 }
+#Capa_2 {
+  transform: rotate(180deg);
+  position: relative;
+  top: 10px;
+}
 .visitSite {
-    height: 38px;
-    width: 170px;
-    cursor: pointer;
-    border: none;
-    outline: 0;
-    border-radius: 20px !important;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    transition: 0.5s all;
-    color: white;
-    background-size: 200%;
-    text-decoration: none;
-    font-family: "Prompt", sans-serif;
-    line-height: 38px;
-    text-align: center;
-    position: relative;
-    &:hover {
-      background-position: 100%;
-    }
+  height: 38px;
+  width: 170px;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  border-radius: 20px !important;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  transition: 0.5s all;
+  color: white;
+  background-size: 200%;
+  text-decoration: none;
+  font-family: "Prompt", sans-serif;
+  line-height: 38px;
+  text-align: center;
+  position: relative;
+  &:hover {
+    background-position: 100%;
   }
+}
 .visitSite {
   color: #333333 !important;
   background-color: white !important;
@@ -199,7 +221,7 @@ export default {
       padding: 25px 50px;
     }
   }
-  .variasImg{
+  .variasImg {
     column-gap: 20px;
   }
 }
@@ -212,7 +234,7 @@ export default {
       padding: 25px 20px;
     }
   }
-  .variasImg{
+  .variasImg {
     column-gap: 20px;
   }
 }

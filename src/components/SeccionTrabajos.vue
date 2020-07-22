@@ -63,7 +63,7 @@ export default {
   align-items: center;
   text-align: center;
   justify-items: center;
-  height: 90vh;
+  min-height: 90vh;
 }
 .infoContainer {
   padding: 0 0 0 150px;
@@ -183,7 +183,7 @@ export default {
   transform: translateX(0);
   opacity: 1;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   #SeccionTrabajos {
     padding: 0 50px;
     .imgContainer {
@@ -195,25 +195,25 @@ export default {
     padding: 0;
     button,
     .visitSite {
-      width: 130px;
+      width: 100%;
+      &::before {
+        transform: scale(1.02, 1.14);
+      }
+    }
+    .buttonsWork {
+      column-gap: 50px;
     }
   }
-}
-@media screen and (max-width: 1024px) {
-  .buttonsWork {
-    column-gap: 15px;
-  }
-}
-@media screen and (max-width: 450px) {
   #SeccionTrabajos {
     padding: 0 20px;
   }
   #myWorks article {
     grid-template-columns: 1fr;
-    row-gap: 100px;
+    row-gap: 120px;
+    margin: 50px 0;
   }
   .infoContainer {
-    padding: 0;
+    padding: 0 150px;
   }
   .imgContainer {
     width: 300px;
@@ -230,6 +230,16 @@ export default {
     100% {
       transform: translate(-50%, -53%);
     }
+  }
+}
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .infoContainer {
+    padding: 15px;
   }
 }
 </style>
