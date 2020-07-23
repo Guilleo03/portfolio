@@ -47,10 +47,11 @@ h2 {
 .fade-enter-active, .fade-leave-active{
   transition: all .3s ease;
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 480px){
   h2{
     padding: 60px 20px;
-    font-size: 40px;
+    font-size: 35px;
+    letter-spacing: 2px;
   }
 }
 </style>

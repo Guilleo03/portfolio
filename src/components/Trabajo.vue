@@ -6,7 +6,7 @@
           id="work-bg"
           :style="{ backgroundImage: 'url(' + require('../assets/img/' + trabajo.bgImg + '.jpg') + ')'}"
         ></div>
-        <h2>{{trabajo.nombre}}</h2>
+        <h2 id="workName">{{trabajo.nombre}}</h2>
         <section id="workInfo">
           <article>
             <p>
@@ -224,8 +224,11 @@ export default {
   .variasImg {
     column-gap: 20px;
   }
+  #workName{
+    padding: 70px 50px;
+  }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   #workInfo {
     padding: 0 20px;
   }
@@ -236,6 +239,9 @@ export default {
   }
   .variasImg {
     column-gap: 20px;
+  }
+  #workName{
+    padding: 50px 20px;
   }
 }
 </style>

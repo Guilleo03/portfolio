@@ -239,7 +239,10 @@ export default {
 }
 @media screen and (max-width: 480px) {
   .infoContainer {
-    padding: 15px;
+    padding: 0;
+    h3{
+      font-size: 25px;
+    }
   }
 }
 </style>

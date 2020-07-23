@@ -11,10 +11,12 @@
         </div>
         <div>
           <a href="https://www.linkedin.com/in/guillermo-otegui/" target="_blank">
-            <i class="fab fa-linkedin-in"></i> <span>/guillermo-otegui</span>
+            <i class="fab fa-linkedin-in"></i>
+            <span>/guillermo-otegui</span>
           </a>
           <a href="mailto:guilleotegui03@gmail.com" target="_blank">
-            <i class="fas fa-envelope"></i> <span>guilleotegui03@gmail.com</span>
+            <i class="fas fa-envelope"></i>
+            <span>guilleotegui03@gmail.com</span>
           </a>
         </div>
       </div>
@@ -141,16 +143,41 @@ footer {
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  footer {
+    #contFooter {
+      a {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   footer {
-    padding: 0 25px;
+    padding: 0 40px;
     #contFooter {
       left: 0;
       transform: translateX(0);
       width: auto;
-      a{
-        span{
-          display: none;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  footer {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  footer {
+    span {
+      font-size: 12px;
+    }
+    #contFooter {
+      div:nth-child(2){
+        a{
+          margin: 0 5px !important;
         }
       }
     }

@@ -663,7 +663,7 @@ nav {
     }
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   nav {
     padding: 0 20px;
     #hamburger {

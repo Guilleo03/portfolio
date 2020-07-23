@@ -22,46 +22,46 @@
       <div id="aboutMe">
         <article v-scrollAnimation>
           <p>En 2019 finalice la carrera de Diseño web en Universidad ORT, donde aprendimos HTML, CSS, Javascript con Jquery, PHP y MySQL, entre otras herramientas de diseño.</p>
-          <p>Actualmente estoy cursando el segundo semestre de Analista en tecnologías de la información, donde estamos aprendiendo ASP.net con C# y bases de datos SQL. Aparte de esto, estoy aprendiendo Vue.js por mi cuenta.</p>
+          <p>En agosto empiezo el tercer semestre de Analista en tecnologías de la información, donde vamos a aprender algoritmos y estructuras de datos y profundizar los conocimientos en ASP.net con C# y bases de datos SQL. Aparte de esto, estoy aprendiendo Vue.js por mi cuenta.</p>
           <ul>
             <li>
               <img src="../assets/img/html.png" alt="html" />
             </li>
             <li>
-              <img src="../assets/img/css.png" alt="html" />
+              <img src="../assets/img/css.png" alt="css" />
             </li>
             <li>
-              <img src="../assets/img/sass.png" alt="html" />
+              <img src="../assets/img/sass.png" alt="sass" />
             </li>
             <li>
-              <img src="../assets/img/bootstrap.png" alt="html" />
+              <img src="../assets/img/bootstrap.png" alt="bootstrap" />
             </li>
             <li>
-              <img src="../assets/img/js.png" alt="html" />
+              <img src="../assets/img/js.png" alt="js" />
             </li>
             <li>
-              <img src="../assets/img/jquery.png" alt="html" />
+              <img src="../assets/img/jquery.png" alt="jquery" />
             </li>
             <li>
-              <img src="../assets/img/vue.png" alt="html" />
+              <img src="../assets/img/vue.png" alt="vue" />
             </li>
             <li>
-              <img src="../assets/img/php.png" alt="html" />
+              <img src="../assets/img/php.png" alt="php" />
             </li>
             <li>
-              <img src="../assets/img/mysql.png" alt="html" />
+              <img src="../assets/img/mysql.png" alt="mysql" />
             </li>
             <li>
-              <img src="../assets/img/ps.png" alt="html" />
+              <img src="../assets/img/ps.png" alt="ps" />
             </li>
             <li>
-              <img src="../assets/img/ai.png" alt="html" />
+              <img src="../assets/img/ai.png" alt="ai" />
             </li>
             <li>
-              <img src="../assets/img/ae.png" alt="html" />
+              <img src="../assets/img/ae.png" alt="ae" />
             </li>
             <li>
-              <img src="../assets/img/git.png" alt="html" />
+              <img src="../assets/img/git.png" alt="git" />
             </li>
           </ul>
         </article>
@@ -999,7 +999,7 @@ ul {
 }
 @media screen and (max-width: 480px) {
   #aboutMe {
-    padding: 50px 35px;
+    padding: 50px 20px;
   }
 }
 </style>
