@@ -2,6 +2,7 @@
     <div>
         <Menu />
             Lista trabajos
+            <!-- aca va la lista de trabajos -->
         <Footer />
     </div>
 </template>
