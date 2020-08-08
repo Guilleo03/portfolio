@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- nav -->
     <nav id="homeNav">
       <router-link to="/">
         <img id="logo" src="../assets/img/logo.png" alt />
