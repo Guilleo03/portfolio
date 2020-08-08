@@ -3,32 +3,28 @@
     <h2>Destacados</h2>
     <section id="myWorks">
       <article v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
-        <!-- <router-link
-          :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
-          v-for="(trabajo,index) of $store.state.Trabajos"
-          :key="index">
-          <button>{{trabajo.nombre}}</button>
-        </router-link>-->
-        <div v-scrollAnimation-left class="infoContainer">
-          <h3>{{trabajo.nombre}}</h3>
-          <p>{{trabajo.descripcion}}</p>
-          <div class="buttonsWork">
-            <router-link
-              v-on:click="scrollToTop"
-              :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
-            >
-              <button>Ver más</button>
-            </router-link>
-            <a
-              v-if="trabajo.urlPagina !== ''"
-              :href="trabajo.urlPagina"
-              class="visitSite"
-              target="_blank"
-            >Ir a la página</a>
+        <div class="workContainer" v-if="trabajo.destacado === true">
+          <div v-scrollAnimation-left class="infoContainer">
+            <h3>{{trabajo.nombre}}</h3>
+            <p>{{trabajo.descripcion}}</p>
+            <div class="buttonsWork">
+              <router-link
+                v-on:click="scrollToTop"
+                :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
+              >
+                <button>Ver más</button>
+              </router-link>
+              <a
+                v-if="trabajo.urlPagina !== ''"
+                :href="trabajo.urlPagina"
+                class="visitSite"
+                target="_blank"
+              >Ir a la página</a>
+            </div>
           </div>
-        </div>
-        <div v-scrollAnimation class="imgContainer">
-          <img :src="require('../assets/img/'+trabajo.imgInicio+'.png')" alt />
+          <div v-scrollAnimation class="imgContainer">
+            <img :src="require('../assets/img/'+trabajo.imgInicio+'.png')" alt />
+          </div>
         </div>
       </article>
     </section>
@@ -42,12 +38,12 @@ import Trabajos from "@/views/Trabajos.vue";
 export default {
   name: "SeccionTrabajos",
   views: {
-    Trabajos
+    Trabajos,
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
-    }
+    },
   }
 };
 </script>
@@ -57,7 +53,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
 }
-#myWorks article {
+.workContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -240,7 +236,7 @@ export default {
 @media screen and (max-width: 480px) {
   .infoContainer {
     padding: 0;
-    h3{
+    h3 {
       font-size: 25px;
     }
   }

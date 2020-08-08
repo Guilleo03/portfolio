@@ -1,20 +1,21 @@
 <template>
     <div>
         <Menu />
-            Lista trabajos
-            <!-- aca va la lista de trabajos -->
+        <CompListaTrabajo />
         <Footer />
     </div>
 </template>
 
 <script>
 import Menu from "@/components/Menu.vue";
+import CompListaTrabajo from "@/components/ListaTrabajos.vue"
 import Footer from "@/components/Footer.vue"
 
 export default {
-  name: "Trabajos",
+  name: "ListaTrabajos",
   components: {
     Menu,
+    CompListaTrabajo,
     Footer
   },
 };

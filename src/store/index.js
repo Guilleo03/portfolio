@@ -15,7 +15,8 @@ export default new Vuex.Store({
                 imgDetalles1: ['home-bicicletas'],
                 imgDetalles2: ['mobile-bicicletas-1', 'mobile-bicicletas-2', 'mobile-bicicletas-3'],
                 bgImg: 'bicicletas-bg',
-                descripcionLarga: ""
+                descripcionLarga: "",
+                destacado: true
 
             },
             {
@@ -28,7 +29,8 @@ export default new Vuex.Store({
                 imgDetalles1: ['clima-1', 'clima-2', 'clima-3'],
                 imgDetalles2: ['clima-4', 'clima-5', 'clima-6'],
                 bgImg: 'clima-bg',
-                descripcionLarga: 'La desarrollamos en la materia Diseño web 3 en 2018. Estabamos aprendiendo a desarrollar aplicaciones moviles, usar Ajax y conectarnos a una API para traer información.'
+                descripcionLarga: 'La desarrollamos en la materia Diseño web 3 en 2018. Estabamos aprendiendo a desarrollar aplicaciones moviles, usar Ajax y conectarnos a una API para traer información.',
+                destacado: true
             },
             {
                 url: "UniformsFactory",
@@ -41,7 +43,8 @@ export default new Vuex.Store({
                 imgDetalles1: ['camisetas-1'],
                 imgDetalles2: ['camisetas-2'],
                 bgImg: 'camisetas-bg',
-                descripcionLarga: 'La desarrollamos en la materia Programación 2 en 2018. Estabamos aprendiendo a usar PHP con MySQL.'
+                descripcionLarga: 'La desarrollamos en la materia Programación 2 en 2018. Estabamos aprendiendo a usar PHP con MySQL.',
+                destacado: false
             }
         ]
     },
