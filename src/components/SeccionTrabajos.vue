@@ -1,6 +1,6 @@
 <template>
   <div id="SeccionTrabajos">
-    <h2>Trabajos</h2>
+    <h2>Destacados</h2>
     <section id="myWorks">
       <article v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
         <!-- <router-link
@@ -150,7 +150,7 @@ export default {
     left: 50%;
     animation: trabajo 5s linear infinite;
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
   }
 }
 @keyframes trabajo {

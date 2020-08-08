@@ -15,7 +15,10 @@
           <router-link id="navHome" to="/">Inicio</router-link>
         </li>
         <li>
-          <router-link id="navWorks" to="/">Trabajos</router-link>
+          <router-link id="navWorks" to="/">Destacados</router-link>
+        </li>
+        <li>
+          <router-link id="navWorkList" to="/Trabajos">Trabajos</router-link>
         </li>
         <li>
           <router-link id="navAboutMe" to="/">Acerca de mí</router-link>
@@ -115,9 +118,12 @@ nav {
       animation-delay: 0.4s;
     }
     :nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    :nth-child(4) {
       margin-right: 0;
       padding-right: 0;
-      animation-delay: 0.6s;
+      animation-delay: 0.8s;
     }
   }
 }

@@ -11,13 +11,16 @@
       </div>
       <ul id="homeUl" ref="nav">
         <li>
-          <router-link id="navHome" to="/">Inicio</router-link>
+          <a id="navHome" href="#inicio" v-smooth-scroll>Inicio</a>
         </li>
         <li>
-          <a id="navWorks" href="#SeccionTrabajos">Trabajos</a>
+          <a id="navWorks" href="#SeccionTrabajos" v-smooth-scroll>Destacados</a>
         </li>
         <li>
-          <a id="navAboutMe" href="#AcercaDeMi">Acerca de mí</a>
+          <router-link id="navWorkList" to="/Trabajos">Trabajos</router-link>
+        </li>
+        <li>
+          <a id="navAboutMe" href="#AcercaDeMi" v-smooth-scroll>Acerca de mí</a>
         </li>
       </ul>
     </nav>
@@ -132,9 +135,12 @@ nav {
       animation-delay: 0.4s;
     }
     :nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    :nth-child(4) {
       margin-right: 0;
       padding-right: 0;
-      animation-delay: 0.6s;
+      animation-delay: 0.8s;
     }
   }
 }

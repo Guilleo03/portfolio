@@ -822,9 +822,6 @@ section {
   background-color: #f7f7f7;
   height: auto;
 }
-h2 {
-  margin-top: 120px;
-}
 
 #Capa_2 {
   transform: rotate(180deg);

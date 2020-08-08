@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import SeccionTrabajos from '../components/SeccionTrabajos'
 import Contacto from '../components/Contacto'
 import AcercaDeMi from '../components/AcercaDeMi'
+import Inicio from '../components/Inicio'
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,11 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/Home.vue'),
         children: [{
+                path: 'Inicio',
+                component: Inicio,
+                meta: { requiresAuth: true }
+            },
+            {
                 path: 'SeccionTrabajos',
                 component: SeccionTrabajos,
                 meta: { requiresAuth: true }
@@ -27,6 +33,12 @@ const routes = [{
                 meta: { requiresAuth: true }
             }
         ]
+    },
+    {
+        path: '/Trabajos',
+        name: 'ListaTrabajos',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/ListaTrabajos.vue')
     },
     {
         path: '/Trabajos/:url',
