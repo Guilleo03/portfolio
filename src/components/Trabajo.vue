@@ -98,12 +98,21 @@ export default {
 
 <style lang="scss">
 #work-bg {
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92vh;
-  position: relative;
+  background-attachment: fixed;
+  height: 66vh;
   top: 8vh;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 66vh;
+    background: linear-gradient(0deg, rgba(114,71,255,0.700717787114846) 0%, rgba(34,201,209,0.38139005602240894) 50%, rgba(34,201,209,0) 100%);
+    z-index: 10;
+    left: 0;
+  }
 }
 #workInfo {
   display: grid;

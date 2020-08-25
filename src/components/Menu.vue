@@ -12,16 +12,16 @@
       </div>
       <ul id="homeUl" ref="nav">
         <li>
-          <router-link id="navHome" to="/">Inicio</router-link>
+          <router-link id="navHome" to="/" @click="open">Inicio</router-link>
         </li>
         <li>
-          <router-link id="navWorks" to="/">Destacados</router-link>
+          <router-link id="navWorks" to="/SeccionTrabajos" @click="open">Destacados</router-link>
         </li>
         <li>
-          <router-link id="navWorkList" to="/Trabajos">Trabajos</router-link>
+          <router-link id="navWorkList" to="/trabajos" @click="open">Trabajos</router-link>
         </li>
         <li>
-          <router-link id="navAboutMe" to="/">Acerca de mí</router-link>
+          <router-link id="navAboutMe" to="/AcercaDeMi" @click="open">Acerca de mí</router-link>
         </li>
       </ul>
     </nav>

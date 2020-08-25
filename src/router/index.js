@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import SeccionTrabajos from '../components/SeccionTrabajos'
-import Contacto from '../components/Contacto'
 import AcercaDeMi from '../components/AcercaDeMi'
 import Inicio from '../components/Inicio'
+import Home from '../views/Home'
 
 Vue.use(VueRouter)
 
@@ -13,35 +13,27 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/Home.vue'),
         children: [{
-                path: 'Inicio',
-                component: Inicio,
-                meta: { requiresAuth: true }
-            },
-            {
-                path: 'SeccionTrabajos',
+                path: '/seccionTrabajos',
                 component: SeccionTrabajos,
-                meta: { requiresAuth: true }
+                meta: { requiresAuth: true },
+                view: Home
             },
             {
-                path: 'AcercaDeMi',
+                path: '/acercaDeMi',
                 component: AcercaDeMi,
-                meta: { requiresAuth: true }
-            },
-            {
-                path: 'Contacto',
-                component: Contacto,
-                meta: { requiresAuth: true }
+                meta: { requiresAuth: true },
+                view: Home
             }
         ]
     },
     {
-        path: '/Trabajos',
+        path: '/trabajos',
         name: 'ListaTrabajos',
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/ListaTrabajos.vue')
     },
     {
-        path: '/Trabajos/:url',
+        path: '/trabajos/:url',
         name: 'Trabajos',
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/Trabajos.vue')

@@ -187,6 +187,10 @@ export default {
       height: 270px;
     }
   }
+  .workContainer{
+    grid-template-columns: 1fr;
+    row-gap: 70px;
+  }
   .infoContainer {
     padding: 0;
     button,

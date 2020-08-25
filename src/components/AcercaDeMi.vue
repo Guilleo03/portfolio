@@ -841,8 +841,12 @@ ul {
   margin-top: 20px;
   li {
     display: inline-block;
+    &:hover img{
+      transform: scale(1);
+    }
     img {
       transform: scale(0.7);
+      transition: .2s all;
     }
   }
 }

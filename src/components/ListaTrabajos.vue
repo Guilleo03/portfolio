@@ -51,14 +51,11 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 150px;
-    row-gap: 100px;
-    column-gap: 30px;
+    row-gap: 120px;
+    column-gap: 100px;
     justify-items: center;
     list-style: none;
     text-align: center;
-    li:nth-child(2n+1) {
-      transform: translateY(50px);
-    }
     p {
       margin-top: 20px;
       font-size: 18px;
