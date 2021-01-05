@@ -25,43 +25,49 @@
           <p>En agosto empiezo el tercer semestre de Analista en tecnologías de la información, donde vamos a aprender algoritmos y estructuras de datos y profundizar los conocimientos en ASP.net con C# y bases de datos SQL. Aparte de esto, estoy aprendiendo Vue.js por mi cuenta.</p>
           <ul>
             <li>
-              <img src="../assets/img/html.png" alt="html" />
+              <img src="../assets/img/html.png" alt="html" title="HTML"/>
             </li>
             <li>
-              <img src="../assets/img/css.png" alt="css" />
+              <img src="../assets/img/css.png" alt="css" title="CSS"/>
             </li>
             <li>
-              <img src="../assets/img/sass.png" alt="sass" />
+              <img src="../assets/img/sass.png" alt="sass"  title="SASS"/>
             </li>
             <li>
-              <img src="../assets/img/bootstrap.png" alt="bootstrap" />
+              <img src="../assets/img/bootstrap.png" alt="bootstrap" title="Bootstrap"/>
             </li>
             <li>
-              <img src="../assets/img/js.png" alt="js" />
+              <img src="../assets/img/js.png" alt="js" title="Javascript"/>
             </li>
             <li>
-              <img src="../assets/img/jquery.png" alt="jquery" />
+              <img src="../assets/img/jquery.png" alt="jquery" title="Jquery"/>
             </li>
             <li>
-              <img src="../assets/img/vue.png" alt="vue" />
+              <img src="../assets/img/vue.png" alt="vue" title="Vue.js"/>
             </li>
             <li>
-              <img src="../assets/img/php.png" alt="php" />
+              <img src="../assets/img/php.png" alt="php" title="PHP"/>
             </li>
             <li>
-              <img src="../assets/img/mysql.png" alt="mysql" />
+              <img src="../assets/img/.net.png" alt=".net" title=".net Framework"/>
             </li>
             <li>
-              <img src="../assets/img/ps.png" alt="ps" />
+              <img src="../assets/img/mysql.png" alt="mysql" title="MySQL"/>
             </li>
             <li>
-              <img src="../assets/img/ai.png" alt="ai" />
+              <img src="../assets/img/sql.png" alt="sql" title="SQL"/>
             </li>
             <li>
-              <img src="../assets/img/ae.png" alt="ae" />
+              <img src="../assets/img/ps.png" alt="ps" title="Photoshop"/>
             </li>
             <li>
-              <img src="../assets/img/git.png" alt="git" />
+              <img src="../assets/img/ai.png" alt="ai" title="Illustrator"/>
+            </li>
+            <li>
+              <img src="../assets/img/ae.png" alt="ae" title="After Effects"/>
+            </li>
+            <li>
+              <img src="../assets/img/git.png" alt="git" title="Git"/>
             </li>
           </ul>
         </article>
