@@ -2,15 +2,15 @@
   <div id="SeccionTrabajos">
     <h2>Destacados</h2>
     <section id="myWorks">
-      <article v-for="(trabajo,index) of $store.state.Trabajos" :key="index">
+      <article v-for="(trabajo, index) of $store.state.Trabajos" :key="index">
         <div class="workContainer" v-if="trabajo.destacado === true">
           <div v-scrollAnimation-left class="infoContainer">
-            <h3>{{trabajo.nombre}}</h3>
-            <p>{{trabajo.descripcion}}</p>
+            <h3>{{ trabajo.nombre }}</h3>
+            <p>{{ trabajo.descripcion }}</p>
             <div class="buttonsWork">
               <router-link
                 v-on:click="scrollToTop"
-                :to="{ name: 'Trabajos', params: {url : trabajo.url} }"
+                :to="{ name: 'Trabajos', params: { url: trabajo.url } }"
               >
                 <button>Ver más</button>
               </router-link>
@@ -19,15 +19,25 @@
                 :href="trabajo.urlPagina"
                 class="visitSite"
                 target="_blank"
-              >Ir a la página</a>
+                >Ir a la página</a
+              >
             </div>
           </div>
           <div v-scrollAnimation class="imgContainer">
-            <img :src="require('../assets/img/'+trabajo.imgInicio+'.png')" alt />
+            <img
+              :src="require('../assets/img/' + trabajo.imgInicio + '.png')"
+              alt
+            />
           </div>
         </div>
       </article>
     </section>
+    <div id="allWorks">
+      <span id="btnContainer">
+        <router-link id="navWorkList" to="/trabajos"
+          >Ver todos los trabajos</router-link>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -44,7 +54,7 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-  }
+  },
 };
 </script>
 
@@ -52,6 +62,43 @@ export default {
 #myWorks {
   display: grid;
   grid-template-columns: 1fr;
+}
+#allWorks {
+  width: 100%;
+  height: 20vh;
+  background-image: linear-gradient(to right, #22c9d1, #7247ff);
+  text-align: center;
+  line-height: 20vh;
+a {
+    margin: 0 auto;
+    background-color: white;
+    background-image: linear-gradient(45deg, #22c9d1, #7247ff, #22c9d1);
+    transform: scale(1.04, 1.14);
+    background-size: 200%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-decoration: none;
+    font-family: "Prompt", sans-serif;
+    position: relative;
+    z-index: 1;
+    transition: .5s all;
+    &:hover{
+      background-position: 100%;
+    }
+    &::after{
+          content: "";
+    position: absolute;
+    background-color: white;
+    padding: 24px 30px;
+    border-radius: 25px;
+    width: 100%;
+    top: -12px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);  
+    transition: 3s all;
+    }
+  } 
 }
 .workContainer {
   display: grid;
@@ -181,13 +228,15 @@ export default {
 }
 @media screen and (max-width: 1024px) {
   #SeccionTrabajos {
-    padding: 0 50px;
     .imgContainer {
       width: 270px;
       height: 270px;
     }
   }
-  .workContainer{
+  #myWorks{
+        padding: 0 50px;
+      }
+  .workContainer {
     grid-template-columns: 1fr;
     row-gap: 70px;
   }
@@ -203,9 +252,6 @@ export default {
     .buttonsWork {
       column-gap: 50px;
     }
-  }
-  #SeccionTrabajos {
-    padding: 0 20px;
   }
   #myWorks article {
     grid-template-columns: 1fr;
