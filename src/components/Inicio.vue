@@ -31,11 +31,11 @@
           <p>Diseño web</p>
         </div>
       </div>
-      <div id="arrows">
+      <a id="arrows" href="#SeccionTrabajos" v-smooth-scroll >
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </a>
       <div id="contStars">
         <div id="stars"></div>
         <div id="stars2"></div>
@@ -236,6 +236,8 @@ nav {
   }
 }
 #arrows {
+  width: 25px;
+  height: 25px;
   position: absolute;
   top: 80vh;
   left: 50%;
@@ -257,6 +259,8 @@ nav {
     -o-transform: rotate(45deg);
     margin: -10px;
     animation: arrows 2s infinite;
+    position: relative;
+    left: 18px;
   }
   :nth-child(2) {
     animation-delay: -0.2s;

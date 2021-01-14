@@ -6,7 +6,7 @@
         <div>
           <span>
             Guillermo Otegui
-            <i class="far fa-copyright"></i> 2020
+            <i class="far fa-copyright"></i> {{new Date().getFullYear()}}
           </span>
         </div>
         <div>
